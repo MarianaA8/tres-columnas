@@ -1,0 +1,83 @@
+body {
+	font-size: 15px;
+}
+
+.grid-container {
+	display: grid;
+	grid-template: 
+	"s u l";
+}
+
+.sedan {
+	grid-area: s;
+	background-color: hsl(31, 77%, 52%);
+	border-radius:  10px 0px 0px 10px; 
+	color: hsl(31, 77%, 52%);
+}
+
+.suv {
+	grid-area: u;
+	background-color: hsl(184, 100%, 22%);
+	color: hsl(184, 100%, 22%);
+}
+
+.luxury {
+	grid-area: l;
+	background-color: hsl(179, 100%, 13%);
+	border-radius: 0px 10px 10px 0px;
+	color: hsl(179, 100%, 13%);
+}
+
+p {
+	font-family: "Lexend Deca";
+	margin: 15px;
+	color: white;
+}
+
+h2 {
+	font-family: "Big Shoulders Display";
+	margin: 15px 10px 50px 18px;
+	color: hsl(0, 0%, 95%);
+}
+
+.boton {
+	background-color: hsl(0, 0%, 95%);
+	text-align: center;
+	border-radius: 10px;
+	width: 110px;
+	height: 30px;
+	font-family: "Lexend Deca";
+	margin: 10px;
+}
+
+.luxury .boton:hover{
+	color: hsl(0, 0%, 95%);
+	background-color: hsl(179, 100%, 13%);
+}
+
+.sedan .boton:hover{
+	color: hsl(0, 0%, 95%);
+	background-color:  hsl(31, 77%, 52%);
+}
+
+.suv .boton:hover {
+	color: hsl(0, 0%, 95%);
+	background-color: hsl(184, 100%, 22%);
+}
+
+@media (min-width: 375px) {
+	.grid-container {
+		grid-template: 
+		"s" 150px
+		"u" 150px
+		"l" 150px/auto;
+	}
+}
+
+@media (min-width: 1440px) {
+	.grid-container {
+		grid-template: 
+		"s u l" 400px/
+		250px 250px 250px;
+	}
+}
